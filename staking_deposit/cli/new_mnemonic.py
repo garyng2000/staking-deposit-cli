@@ -48,15 +48,16 @@ def new_mnemonic(ctx: click.Context, mnemonic_language: str, **kwargs: Any) -> N
     mnemonic = get_mnemonic(language=mnemonic_language, words_path=WORD_LISTS_PATH)
     test_mnemonic = ''
     while mnemonic != test_mnemonic:
-        click.clear()
+        #click.clear()
         click.echo(load_text(['msg_mnemonic_presentation']))
-        click.echo('\n\n%s\n\n' % mnemonic)
-        click.pause(load_text(['msg_press_any_key']))
+        click.echo('mnemonic:%s\n\n' % mnemonic)
+        #click.pause(load_text(['msg_press_any_key']))
 
-        click.clear()
-        test_mnemonic = click.prompt(load_text(['msg_mnemonic_retype_prompt']) + '\n\n')
-        test_mnemonic = test_mnemonic.lower()
-    click.clear()
+        #click.clear()
+        test_mnemonic = mnemonic
+        #test_mnemonic = click.prompt(load_text(['msg_mnemonic_retype_prompt']) + '\n\n')
+        #test_mnemonic = test_mnemonic.lower()
+    #click.clear()
     # Do NOT use mnemonic_password.
     ctx.obj = {'mnemonic': mnemonic, 'mnemonic_password': ''}
     ctx.params['validator_start_index'] = 0
