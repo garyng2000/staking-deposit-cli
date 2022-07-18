@@ -3,6 +3,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+This is fork to suppress the prompt(s) that hinders scripting use(where everything is given via parameters)
+
 - [Introduction](#introduction)
 - [Tutorial for users](#tutorial-for-users)
   - [Build requirements](#build-requirements)
