@@ -74,20 +74,20 @@ def validate_mnemonic(ctx: click.Context, param: Any, mnemonic: str) -> str:
 #     prompt=lambda: load_text(['arg_mnemonic', 'prompt'], func='existing_mnemonic'),
 #     type=str,
 # )
-@jit_option(
-    callback=captive_prompt_callback(
-        lambda x: x,
-        lambda: load_text(['arg_mnemonic_password', 'prompt'], func='existing_mnemonic'),
-        None,
-        lambda: load_text(['arg_mnemonic_password', 'mismatch'], func='existing_mnemonic'),
-        True,
-    ),
-    default='',
-    help=lambda: load_text(['arg_mnemonic_password', 'help'], func='existing_mnemonic'),
-    hidden=True,
-    param_decls='--mnemonic-password',
-    prompt=False,
-)
+# @jit_option(
+#     callback=captive_prompt_callback(
+#         lambda x: x,
+#         lambda: load_text(['arg_mnemonic_password', 'prompt'], func='existing_mnemonic'),
+#         None,
+#         lambda: load_text(['arg_mnemonic_password', 'mismatch'], func='existing_mnemonic'),
+#         True,
+#     ),
+#     default='',
+#     help=lambda: load_text(['arg_mnemonic_password', 'help'], func='existing_mnemonic'),
+#     hidden=True,
+#     param_decls='--mnemonic-password',
+#     prompt=False,
+# )
 @load_mnemonic_arguments_decorator
 @jit_option(
     callback=captive_prompt_callback(
